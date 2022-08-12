@@ -1,0 +1,28 @@
+server:
+  port: 8001
+  servlet:
+    encoding:
+      charset: UTF-8
+
+# 用例配置
+base:
+  rootTopic: rootTopic          # JSON 根路径
+  titleContent: title           # 项目名称, 也是用例、前置条件、预期结果等，内容
+  module: tag-red               # 项目模块
+  preCondition: flag-red        # 前置条件
+  baseStep: people-blue         # 步骤
+  high: priority-1              # 用例优先级：高
+  medium: priority-2            # 用例优先级：中
+  low: priority-3               # 用例优先级：低
+  baseResult: task-done         # 预期结果
+  remark: content               # 备注
+
+#  config: classpath:logback-spring.xml
+logging:
+  level:
+    root: info
+    com:
+      ejlchina:
+        searcher: DEBUG
+  pattern:
+    console: '%d{HH:mm:ss} %-4level - %msg%n'
